@@ -21,5 +21,5 @@ Apos isso só fazer começar a utilizar :sunglasses:
 
 #### <img src="https://www.herokucdn.com/favicons/favicon.ico" width="20">eroku
 
-Para utilizar a API hospedada na heroku basta utlizar esse link:
+Para utilizar a API hospedada na heroku basta passar ceps para esse link: https://buscarceps.herokuapp.com/search/local/
 
