@@ -2,12 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Jobs\SearchCep;
-use Illuminate\Support\Facades\Queue;
-
-// use Illuminate\Http\Request;
-
-
 class Search extends Controller
 {
 
@@ -49,7 +43,7 @@ class Search extends Controller
         $responses = [];
         for ($i = 0; $i != count($request_list); $i++) {
             curl_multi_remove_handle($mh, $request_list[$i]);
-            array_push($responses, curl_multi_getcontent($request_list[$i]));
+            array_push($responses, json_decode(curl_multi_getcontent($request_list[$i]),true));
         }
         curl_multi_close($mh);
 
@@ -67,6 +61,6 @@ class Search extends Controller
         }
 
         $ceps_data = $this->request_api($req_list);
-        return $ceps_data;
+        return response()->json($ceps_data);
     }
 }

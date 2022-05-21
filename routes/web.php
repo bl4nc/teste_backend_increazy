@@ -7,4 +7,4 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->get('/search/{ceps}','Search@search');
+$router->get('/search/local/{ceps}','Search@search');
