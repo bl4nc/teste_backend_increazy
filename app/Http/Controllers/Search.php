@@ -43,7 +43,8 @@ class Search extends Controller
         $responses = [];
         for ($i = 0; $i != count($request_list); $i++) {
             curl_multi_remove_handle($mh, $request_list[$i]);
-            array_push($responses, json_decode(curl_multi_getcontent($request_list[$i]),true));
+            $resp =  json_decode(curl_multi_getcontent($request_list[$i]), true);
+            if (!isset($resp['erro'])) array_push($responses, $resp);
         }
         curl_multi_close($mh);
 
