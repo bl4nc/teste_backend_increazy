@@ -19,3 +19,41 @@ Apos isso só fazer começar a utilizar :sunglasses:
 
 Para utilizar a API hospedada na heroku basta passar ceps para esse link: https://buscarceps.herokuapp.com/search/local/
 
+#### Exemplo de request
+
+**URL** : `/search/local/$ceps`
+**Ex** :  `https://buscarceps.herokuapp.com/search/local/44051682,44023252,1123111,333456, ...`
+
+
+#####Response
+
+```json
+[
+    {
+    "cep": "xxxxx-xxx",
+    "logradouro": "lorem inspur",
+    "complemento": "lorem inspur",
+    "bairro": "lorem inspur",
+    "localidade": "lorem inspur",
+    "uf": "lorem inspur",
+    "ibge": "lorem inspur",
+    "gia": "",
+    "ddd": "xx",
+    "siafi": "xxxx"
+    },
+    {
+    "cep": "xxxxx-xxx",
+    "logradouro": "lorem inspur",
+    "complemento": "lorem inspur",
+    "bairro": "lorem inspur",
+    "localidade": "lorem inspur",
+    "uf": "lorem inspur",
+    "ibge": "lorem inspur",
+    "gia": "",
+    "ddd": "xx",
+    "siafi": "xxxx"
+    }
+
+]
+
+```
